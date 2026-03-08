@@ -20,48 +20,42 @@ const Login = () => (
     onFinishFailed={onFinishFailed}
     autoComplete='off'
     layout='vertical'
+    variant='underlined'
   >
     <div className='flex justify-center p-2 gap-2 items-center'>
       <img src={trello} alt='' />
       <h2 className='font-bold text-2xl'>Trello</h2>
     </div>
-    <Form.Item
-      label='Tên đăng nhập'
-      name='name'
-      rules={[{ required: true, message: 'Please input your name!' }]}
-      className='!mb-2'
-    >
+    <Form.Item label='Tên đăng nhập' name='name' className='mb-2!'>
       <Input className='w-full' style={{ width: '100%' }} />
     </Form.Item>
 
-    <Form.Item
-      label='Mật khẩu'
-      name='password'
-      rules={[{ required: true, message: 'Please input your password!' }]}
-      className='!mb-2'
-    >
+    <Form.Item label='Mật khẩu' name='password' hasFeedback className='mb-2!'>
       <Input.Password className='w-full' style={{ width: '100%' }} />
     </Form.Item>
 
-    <Form.Item className='!mb-2'>
+    <Form.Item className='mb-2!'>
       <Flex justify='space-between' align='center'>
-        <Link to='/register'>Chưa có tài khoản</Link>
         <a href=''>Quên mật khẩu</a>
+        <Link to='/register'>Chưa có tài khoản</Link>
       </Flex>
     </Form.Item>
 
-    <Form.Item className='!mb-2'>
+    <Form.Item className='mb-2!'>
       <Button block type='primary' htmlType='submit' className='border border-gray-100 py-2 px-4'>
         Đăng nhập
       </Button>
     </Form.Item>
-    <Form.Item className='!mb-2'>
+    <Form.Item className='mb-2!'>
       <Flex justify='center' align='center'>
         <span>or</span>
       </Flex>
     </Form.Item>
-    <Form.Item className='!mb-2'>
-      <button className='hover:bg-primary border border-gray-100 w-full py-2 px-4 rounded-md font-bold cursor-pointer'>
+    <Form.Item className='mb-2!'>
+      <button
+        onSubmit={() => {}}
+        className='hover:bg-primary border border-gray-100 w-full py-2 px-4 rounded-md font-bold cursor-pointer'
+      >
         <Flex justify='center' align='center' gap={10}>
           <img src={Google} alt='Google' width={20} height={20} />
           <span>Google</span>
