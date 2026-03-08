@@ -4,12 +4,15 @@ import { useRoutes } from 'react-router-dom';
 
 const Login = lazy(() => import('@/pages/auths/Login'));
 const Register = lazy(() => import('@/pages/auths/Register'));
+const MainLayout = lazy(() => import('@/layouts/MainLayout'));
+
+// const children = <></>;
 
 export default function useRouteElements() {
   const routeElements = useRoutes([
     {
       path: '/',
-      element: <>Home</>
+      element: <MainLayout></MainLayout>
     },
     {
       path: '/login',

@@ -1,5 +1,10 @@
 @import 'tailwindcss';
+
 @theme {
   --color-primary: #fafbfc;
   --color-secondary: #ffffff;
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
 }
